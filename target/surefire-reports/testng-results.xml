@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="90421" started-at="2020-10-29T05:17:44Z" finished-at="2020-10-29T05:19:14Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="90421" started-at="2020-10-29T05:17:44Z" finished-at="2020-10-29T05:19:14Z">
+      <class name="com.cucumber.TestRunner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.cucumber.TestRunner.TestRunner@e26948]" name="setUpClass" is-config="true" duration-ms="1090" started-at="2020-10-29T05:17:44Z" finished-at="2020-10-29T05:17:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.cucumber.TestRunner.TestRunner@e26948]" name="feature" duration-ms="61180" started-at="2020-10-29T05:17:45Z" data-provider="features" finished-at="2020-10-29T05:18:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Search and verify click on Title]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.cucumber.TestRunner.TestRunner@e26948]" name="feature" duration-ms="27620" started-at="2020-10-29T05:18:47Z" data-provider="features" finished-at="2020-10-29T05:19:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Youtube Search Test]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.cucumber.TestRunner.TestRunner@e26948]" name="tearDownClass" is-config="true" duration-ms="162" started-at="2020-10-29T05:19:14Z" finished-at="2020-10-29T05:19:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.cucumber.TestRunner.TestRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

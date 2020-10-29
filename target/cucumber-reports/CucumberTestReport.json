@@ -1,0 +1,250 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 11,
+        "name": "Search and verify click on Title",
+        "description": "",
+        "id": "search-and-verify-click-on-title;search-and-verify-click-on-title;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 26805973466,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Launch browser and enter url",
+            "match": {
+              "location": "SearchCriteriaClass.launch_browser_and_enter_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1496671194,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Enter searching \"cucumber architecture\" criteria",
+            "match": {
+              "arguments": [
+                {
+                  "val": "cucumber architecture",
+                  "offset": 17
+                }
+              ],
+              "location": "SearchCriteriaClass.enter_searching_criteria(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3569099491,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Click on channel link",
+            "match": {
+              "location": "SearchCriteriaClass.click_on_channel_link()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 27627303,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate channel name",
+            "match": {
+              "location": "SearchCriteriaClass.validate_channel_name()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1431161994,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Close browser",
+            "match": {
+              "location": "SearchCriteriaClass.close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Sanity"
+          }
+        ]
+      },
+      {
+        "line": 12,
+        "name": "Search and verify click on Title",
+        "description": "",
+        "id": "search-and-verify-click-on-title;search-and-verify-click-on-title;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 21606901516,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Launch browser and enter url",
+            "match": {
+              "location": "SearchCriteriaClass.launch_browser_and_enter_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 673556164,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Enter searching \"cucumber architecture\" criteria",
+            "match": {
+              "arguments": [
+                {
+                  "val": "cucumber architecture",
+                  "offset": 17
+                }
+              ],
+              "location": "SearchCriteriaClass.enter_searching_criteria(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3656567207,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Click on channel link",
+            "match": {
+              "location": "SearchCriteriaClass.click_on_channel_link()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 19287440,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validate channel name",
+            "match": {
+              "location": "SearchCriteriaClass.validate_channel_name()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1743476254,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Close browser",
+            "match": {
+              "location": "SearchCriteriaClass.close_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@Sanity"
+          }
+        ]
+      }
+    ],
+    "name": "Search and verify click on Title",
+    "description": "",
+    "id": "search-and-verify-click-on-title",
+    "keyword": "Feature",
+    "uri": "SearchCriteria.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Sanity"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Youtube Search Positive Test",
+        "description": "",
+        "id": "youtube-search-test;youtube-search-positive-test",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 19671214398,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Open chrome browser and enter url",
+            "match": {
+              "location": "SearchClass.open_chrome_browser_and_enter_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1675702039,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Enter search criteria",
+            "match": {
+              "location": "SearchClass.enter_search_criteria()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6254946355,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Click on search button",
+            "match": {
+              "location": "SearchClass.click_on_search_button()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Youtube Search Test",
+    "description": "",
+    "id": "youtube-search-test",
+    "keyword": "Feature",
+    "uri": "SearchTest.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Sanity"
+      }
+    ]
+  }
+]

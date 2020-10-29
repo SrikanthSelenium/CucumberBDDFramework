@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="88.632185">
+<testcase classname="Search and verify click on Title" name="Search and verify click on Title" time="33.330533">
+<system-out><![CDATA[Given Launch browser and enter url..........................................passed
+When Enter searching "cucumber architecture" criteria.......................passed
+And Click on channel link...................................................passed
+Then Validate channel name..................................................passed
+Then Close browser..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and verify click on Title" name="Search and verify click on Title 2" time="27.699789">
+<system-out><![CDATA[Given Launch browser and enter url..........................................passed
+When Enter searching "cucumber architecture" criteria.......................passed
+And Click on channel link...................................................passed
+Then Validate channel name..................................................passed
+Then Close browser..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Youtube Search Test" name="Youtube Search Positive Test" time="27.601863">
+<system-out><![CDATA[Given Open chrome browser and enter url.....................................passed
+When Enter search criteria..................................................passed
+Then Click on search button.................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
