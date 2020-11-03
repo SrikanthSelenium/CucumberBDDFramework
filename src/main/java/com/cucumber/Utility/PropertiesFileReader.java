@@ -8,10 +8,10 @@ public class PropertiesFileReader {
 
 	private FileInputStream file;
 	public Properties OR;
-
+	public String projPath = System.getProperty("user.dir");
 	public Properties getProperty() throws Exception {
 
-		String filepath = "E:\\MyFrameworks\\SeleniumCucumberBDDFramework\\resources\\config.properties";
+		String filepath = projPath+"\\resources\\config.properties";
 
 		file = new FileInputStream(new File(filepath));
 		OR = new Properties();

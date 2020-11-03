@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -100,6 +100,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.cucumber.TestRunner.TestRunner" hash-for-method="feature(Search and verify click on Title)">feature(Search and verify click on Title)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.cucumber.TestRunner.TestRunner" hash-for-method="feature(Search and verify click on Title)">feature(Search and verify click on Title)</a> <!-- method navigator-link -->
@@ -128,6 +133,14 @@
               <span class="class-name">com.cucumber.TestRunner.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="feature(Search and verify click on Title)">
+                  </a> <!-- feature(Search and verify click on Title) -->
+                  <span class="method-name">feature</span>
+                  <span class="parameters">(Search and verify click on Title)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="feature(Search and verify click on Title)">
@@ -198,15 +211,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'com.cucumber.TestRunner.TestRunner')
-data.setCell(0, 3, 61180);
+data.setCell(0, 3, 43767);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'feature')
 data.setCell(1, 2, 'com.cucumber.TestRunner.TestRunner')
-data.setCell(1, 3, 27620);
+data.setCell(1, 3, 25081);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'feature')
+data.setCell(2, 2, 'com.cucumber.TestRunner.TestRunner')
+data.setCell(2, 3, 24004);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -244,15 +261,19 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">feature(Search and verify click on Title)</span>
-                <span class="method-start">1399 ms</span>
+                <span class="method-start">1481 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">feature(Search and verify click on Title)</span>
+                <span class="method-start">45251 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">feature(Youtube Search Test)</span>
-                <span class="method-start">62581 ms</span>
+                <span class="method-start">69256 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">90225 ms</span>
+                <span class="method-start">94338 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

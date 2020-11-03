@@ -1,11 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>SeleniumCucumberBDDFramework</groupId>
-  <artifactId>SeleniumCucumberBDDFramework</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>SeleniumCucumberBDDFramework</name>
-  <description>SeleniumCucumberBDDFramework</description>
-  <dependencies>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.cucumberframework</groupId>
+	<artifactId>SeleniumCucumberBDDFramework</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>SeleniumCucumberBDDFramework</name>
+	<description>SeleniumCucumberBDDFramework</description>
+	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -104,14 +106,18 @@
 			<artifactId>freemarker</artifactId>
 			<version>2.3.23</version>
 		</dependency>
-
+ 
 		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
-			<version>4.2.0</version>
+			<version>4.8.1</version>
 		</dependency>
-
 		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>4.8.1</version>
+		</dependency> 
+  		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-testng</artifactId>
 			<version>4.2.0</version>
@@ -140,54 +146,74 @@
 		<dependency>
 			<groupId>net.masterthought</groupId>
 			<artifactId>cucumber-reporting</artifactId>
-			<version>3.8.0</version>
+			<version>5.4.0</version>
 		</dependency>
 
 	</dependencies>
 	<build>
-		<pluginManagement>
-			<plugins>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.8.1</version>
-					<configuration>
-						<source>1.8</source>
-						<target>1.8</target>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M5</version>
-					<configuration>
-						<suiteXmlFiles>
-							<suiteXmlFile>E:\MyFrameworks\SeleniumCucumberBDDFramework\testng.xml</suiteXmlFile>
-						</suiteXmlFiles>
-					</configuration>
-				</plugin>
-				<plugin>
-					<groupId>net.masterthought</groupId>
-					<artifactId>maven-cucumber-reporting</artifactId>
-					<version>3.8.0</version>
-					<executions>
-						<execution>
-							<id>execution</id>
-							<phase>verify</phase>
-							<goals>
-								<goal>generate</goal>
-							</goals>
-							<configuration>
-								<projectName>SeleniumCucumberBDDFramework</projectName>
-								<outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
-								<cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>
-								<buildNumber>1</buildNumber>
-								<skippedFails>true</skippedFails>
-							</configuration>
-						</execution>
-					</executions>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+				 <testFailureIgnore>true</testFailureIgnore>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>5.0.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>SeleniumCucumberBDDFramework</projectName> <!-- Replace with project name -->
+							<outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
+							<cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>
+							<buildNumber>1</buildNumber>
+							<parallelTesting>true</parallelTesting>
+							<skip>false</skip>
+							<inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
+							<jsonFiles> <!-- supports wildcard or name pattern -->
+								<param>**/*.json</param>
+							</jsonFiles> <!-- optional, defaults to outputDirectory if not specified -->
+							<classificationDirectory>${project.build.directory}/cucumber-reports</classificationDirectory>
+							<classificationFiles> <!-- supports wildcard or name pattern -->
+								<param>sample.properties</param>
+								<param>other.properties</param>
+							</classificationFiles>
+							<parallelTesting>true</parallelTesting> <!-- optional, set true to fail build on test failures -->
+							<checkBuildResult>true</checkBuildResult>
+						</configuration>
+					</execution>
+					<!-- > <execution> <id>execution</id> <phase>verify</phase> <goals> 
+						<goal>generate</goal> </goals> <configuration> <projectName>SeleniumCucumberBDDFramework</projectName> 
+						<outputDirectory>${project.build.directory}/cucumber-html-report</outputDirectory> 
+						<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput> 
+						<jsonFiles> <param>**/*.json</param> </jsonFiles> <buildNumber>1</buildNumber> 
+						<checkBuildResult>true</checkBuildResult> <parallelTesting>false</parallelTesting> 
+						</configuration> </execution> -->
+				</executions>
+			</plugin>
+		</plugins>
+
 	</build>
 </project>

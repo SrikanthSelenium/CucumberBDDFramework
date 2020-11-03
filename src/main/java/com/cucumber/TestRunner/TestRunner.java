@@ -8,12 +8,11 @@ import org.testng.annotations.Test;
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
-import cucumber.api.testng.*;
 
 @CucumberOptions(features = "src/test/resources/features", dryRun = false, glue = { "com.cucumber.StepDef" }, tags = {
-		"@Sanity" }, plugin = { "pretty", "html:target/cucumber-reports/cucumber-pretty",
-				"json:target/cucumber-reports/CucumberTestReport.json", "rerun:target/cucumber-reports/rerun.txt",
-				"junit:target/cucumber-reports/cucumber-reports/cucumber.xml" }, monochrome = true)
+		"@Search, @Search1 ,@Search2" }, plugin = { "pretty", "html:target/cucumber-html-report",
+				"json:target/cucumber-reports/CucumberTestReport.json", "rerun:target/rerun.txt",
+				"junit:target/cucumber.xml" }, monochrome = true)
 public class TestRunner {
 	private TestNGCucumberRunner testNGCucumberRunner;
 

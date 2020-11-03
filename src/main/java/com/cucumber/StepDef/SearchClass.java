@@ -1,36 +1,31 @@
 package com.cucumber.StepDef;
 
 import java.util.Properties;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.cucumber.Utility.PropertiesFileReader;
-import com.cucumber.helper.ResourceHelper;
+import com.cucumber.testBase.TestBase;
 
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 
-public class SearchClass {
+@SuppressWarnings("deprecation")
+public class SearchClass extends TestBase {
 
-	public static WebDriver driver;
 	PropertiesFileReader obj = new PropertiesFileReader();
 
 	@Given("^Open chrome browser and enter url$")
 	public void open_chrome_browser_and_enter_url() throws Throwable {
 		Properties prop = obj.getProperty();
-		System.setProperty("webdriver.chrome.driver",ResourceHelper.systemPath(prop.getProperty("browser.driver")));
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
 		driver.get(prop.getProperty("browser.baseURL"));
 		Thread.sleep(3000);
-
 	}
 
-	@When("^Enter search criteria$")
+	@Then("^Enter search criteria$")
 	public void enter_search_criteria() throws Throwable {
 		WebDriverWait wait = new WebDriverWait(driver, 120);
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(".//*[@name='search_query']"))));
@@ -39,14 +34,12 @@ public class SearchClass {
 
 	}
 
-	@Then("^Click on search button$")
+	@And("^Click on search button$")
 	public void click_on_search_button() throws Throwable {
 		WebDriverWait wait = new WebDriverWait(driver, 120);
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//button[@id='search-icon-legacy']"))));
 		driver.findElement(By.xpath("//button[@id='search-icon-legacy']")).click();
 		Thread.sleep(3000);
-		driver.quit();
-
 	}
 
 }

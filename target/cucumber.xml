@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="92.67">
+<testcase classname="Search and verify click on Title" name="Search and verify click on Title" time="22.60147">
+<system-out><![CDATA[Given Launch browser and enter url..........................................passed
+When Enter searching "cucumber architecture" criteria.......................passed
+And Click on channel link...................................................passed
+Then Validate channel name..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and verify click on Title" name="Search and verify click on Title 2" time="21.028974">
+<system-out><![CDATA[Given Launch browser and enter url..........................................passed
+When Enter searching "cucumber architecture" criteria.......................passed
+And Click on channel link...................................................passed
+Then Validate channel name..................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and verify click on Title" name="Search and verify click on Title" time="23.981383">
+<system-out><![CDATA[Given Launch browser and enter appsite......................................passed
+When Enter searching criteria...............................................passed
+And Click on channel button.................................................passed
+Then Validate channel name with actual name.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Youtube Search Test" name="Youtube Search Positive Test" time="25.058173">
+<system-out><![CDATA[Given Open chrome browser and enter url.....................................passed
+When Enter search criteria..................................................passed
+Then Click on search button.................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
